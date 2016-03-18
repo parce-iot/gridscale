@@ -1,0 +1,13 @@
+{
+	"ImportPath": "github.com/parce-iot/gridscale-sdk-go",
+	"GoVersion": "go1.6",
+	"Packages": [
+		"github.com/shopspring/decimal"
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/shopspring/decimal",
+			"Rev": "d282b0416666d39ec41fc37a31123241ffe6d935"
+		}
+	]
+}
