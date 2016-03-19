@@ -9,6 +9,7 @@ import (
 	"github.com/shopspring/decimal"
 )
 
+// Template holds information about a storage volume template
 type Template struct {
 	Capacity        int             `json:"capacity"`
 	ChangeTime      time.Time       `json:"change_time"`

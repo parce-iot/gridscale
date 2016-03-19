@@ -5,14 +5,17 @@ import (
 	"net/http"
 )
 
+// Client is the gridscale Client class
 type Client struct {
-	userId    string
+	userID    string
 	authToken string
 	endpoint  string
 }
 
-func NewClient(userId, authToken, endpoint string) (*Client, error) {
-	return &Client{userId, authToken, endpoint}, nil
+// NewClient creates a new gridscale Client. You have to provide the gridscale
+// API user-id UUID, auth token and the API endpoint URL.
+func NewClient(userID, authToken, endpoint string) (*Client, error) {
+	return &Client{userID, authToken, endpoint}, nil
 }
 
 func (c *Client) httpCall(method, path string, body []byte) (*http.Response, error) {
@@ -23,7 +26,7 @@ func (c *Client) httpCall(method, path string, body []byte) (*http.Response, err
 		req, _ = http.NewRequest(method, c.endpoint+path, nil)
 	}
 
-	req.Header.Add("X-Auth-UserId", c.userId)
+	req.Header.Add("X-Auth-UserId", c.userID)
 	req.Header.Add("X-Auth-Token", c.authToken)
 	if body != nil {
 		req.Header.Set("Content-Type", "application/json")
