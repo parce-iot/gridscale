@@ -1,7 +1,7 @@
 Golang gridscale SDK
 ====================
 
-[![GoDoc](https://godoc.org/github.com/Shopify/sarama?status.png)](https://godoc.org/github.com/parce-iot/gridscale)
+[![GoDoc](https://godoc.org/github.com/Shopify/sarama?status.png)](https://godoc.org/github.com/parce-iot/gridscale) [![Go Report Card](https://goreportcard.com/badge/github.com/parce-iot/gridscale)](https://goreportcard.com/report/github.com/parce-iot/gridscale) [![Build Status](https://travis-ci.org/parce-iot/gridscale.svg?branch=master)](https://travis-ci.org/parce-iot/gridscale) [![Coverage Status](https://coveralls.io/repos/github/parce-iot/gridscale/badge.svg?branch=master)](https://coveralls.io/github/parce-iot/gridscale?branch=master)
 
 Introduction
 ------------
