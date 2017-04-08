@@ -4,6 +4,8 @@ type objectWrapper struct {
 	IPs *map[string]restIP `json:"ips,omitempty"`
 	IP  *restIP            `json:"ip,omitempty"`
 
+	Locations *map[string]Location `json:"locations,omitempty"`
+
 	Networks *map[string]restNetwork `json:"networks,omitempty"`
 	Network  *restNetwork            `json:"network,omitempty"`
 
