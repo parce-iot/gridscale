@@ -55,6 +55,7 @@ func TestCreateRenameDeleteStorage(t *testing.T) {
 		return
 	}
 
+	s, err = c.GetStorage(s.ID)
 	for s.Status == "in-provisioning" {
 		time.Sleep(time.Second)
 		s, err = c.GetStorage(s.ID)
