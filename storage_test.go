@@ -55,6 +55,11 @@ func TestCreateRenameDeleteStorage(t *testing.T) {
 		return
 	}
 
+	for s.Status == "in-provisioning" {
+		time.Sleep(time.Second)
+		s, err = c.GetStorage(s.ID)
+	}
+
 	err = c.DeleteStorage(s.ID)
 	if err != nil {
 		t.Errorf("Could not delete storage: %s", err)
