@@ -87,7 +87,7 @@ type Storage struct {
 
 // StorageTemplateParameters holds parameters to create a storage volume from a template
 type StorageTemplateParameters struct {
-	Hostname     string   `json:"hostname"`
+	Hostname     string   `json:"hostname,omitempty"`
 	Password     string   `json:"password,omitempty"`
 	PasswordType string   `json:"password_type,omitempty"` // plain
 	TemplateID   string   `json:"template_uuid"`

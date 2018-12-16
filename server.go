@@ -11,25 +11,25 @@ import (
 
 // Server holds information about a server.
 type Server struct {
-	ID              string                      `json:"object_uuid"`
-	Name            string                      `json:"name"`
-	Status          string                      `json:"status"`
-	Labels          []string                    `json:"labels"`
-	Cores           int                         `json:"cores"`
-	Power           bool                        `json:"power"`
-	ConsoleToken    string                      `json:"console_token"`
-	CurrentPrice    decimal.Decimal             `json:"current_price"`
-	Relations       map[string][]ServerRelation `json:"relations"`
-	CreateTime      time.Time                   `json:"create_time"`
-	ChangeTime      time.Time                   `json:"change_time"`
-	LocationName    string                      `json:"location_name"`
-	LocationIata    string                      `json:"location_iata"`
-	LocationID      string                      `json:"location_uuid"`
-	LocationCountry string                      `json:"location_country"`
+	ID              string          `json:"object_uuid"`
+	Name            string          `json:"name"`
+	Status          string          `json:"status"`
+	Labels          []string        `json:"labels"`
+	Cores           int             `json:"cores"`
+	Power           bool            `json:"power"`
+	ConsoleToken    string          `json:"console_token"`
+	CurrentPrice    decimal.Decimal `json:"current_price"`
+	Relations       ServerRelations `json:"relations"`
+	CreateTime      time.Time       `json:"create_time"`
+	ChangeTime      time.Time       `json:"change_time"`
+	LocationName    string          `json:"location_name"`
+	LocationIata    string          `json:"location_iata"`
+	LocationID      string          `json:"location_uuid"`
+	LocationCountry string          `json:"location_country"`
 }
 
-// ServerRelation holds all relations to other gridscale objects (storages, networks etc.).
-type ServerRelation struct {
+// ServerRelations holds all relations to other gridscale objects (storages, networks etc.).
+type ServerRelations struct {
 	Distance  []interface{}           `json:"distance"`  // TODO: what's that?
 	IsoImages []interface{}           `json:"isoimages"` // TODO
 	Networks  []ServerNetworkRelation `json:"networks"`
